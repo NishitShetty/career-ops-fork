@@ -120,3 +120,21 @@ plan/
 # (see DATA_CONTRACT.md). Re-include them past the unanchored user-layer
 # patterns above (cv.md, portals.yml).
 !test-fixtures/**
+
+# --- Private fork override ---
+# This is a private fork (NishitShetty/career-ops-fork), not the public
+# template, so we deliberately track personal career-ops state here: cloning
+# this repo anywhere restores the full setup instead of re-running onboarding.
+# Later patterns win in git, so these negations re-include specific files
+# without touching the public-template rules above.
+# Still excluded even in this private fork: data/offers/* (received
+# offer/contract PII), interview-prep/sessions/* (real interviewer names),
+# .env, config/plugins.yml — same reasoning as upstream, repo-visibility-independent.
+!cv.md
+!config/profile.yml
+!portals.yml
+!modes/_profile.md
+!modes/_custom.md
+!data/applications.md
+!reports/*.md
+!interview-prep/*.md
