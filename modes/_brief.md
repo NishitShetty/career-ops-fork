@@ -83,8 +83,12 @@ default **3.5**), matching the verdict table in `modes/triage.md`.
 - Requires a portfolio/public GitHub (none currently exists — do not fabricate one)
 
 ## Priority Override List — always return PASS regardless of score
-- **Amazon** — Canadian + US entity, runs intracompany transfers at scale, owns Leo/Kuiper
-- **MDA Space** — Canadian, US operations, exact domain match
-- **ST Engineering iDirect** — current employer; internal moves are the cheapest path
-- **Telesat** — Ottawa, exact domain match
-- **Kepler Communications** — Toronto HQ with a US entity
+Phase 1 strategy: **Toronto-area geospatial/mapping at big-tech-tier employers that
+have both a Canadian office and a US entity.** Manager-track titles preferred over IC
+at equal comp — a documented managerial record is a prerequisite downstream.
+- **Amazon** — CA+US entity, runs intracompany transfers at scale, Maps + Leo/Kuiper
+- **Google** — Waterloo/Toronto/Montreal; Google Maps
+- **Uber** / **Lyft** — Toronto engineering; mapping orgs; CA+US entity
+- **Microsoft** — Toronto/Vancouver; Bing/Azure Maps
+- **Apple** — Ottawa office; Apple Maps
+- **MDA Space**, **Telesat**, **Kepler**, **ST Engineering iDirect** — satcom fallback tier

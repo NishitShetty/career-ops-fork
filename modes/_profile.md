@@ -51,7 +51,7 @@ Do not use generic scripts with placeholder numbers until the user fills in `com
 > Long-term immigration strategy lives in the `career` repo, not here. The block below is generated from it.
 > **Do not edit inside the sentinels** — edit `career/digest.md`, bump the version stamp, re-paste, and run `career/check.sh`.
 
-<!-- BEGIN DERIVED FROM career@digest.md · v2026-08-02.1 · DO NOT EDIT HERE -->
+<!-- BEGIN DERIVED FROM career@digest.md · v2026-08-03.1 · DO NOT EDIT HERE -->
 
 **Base case:** Canadian citizen based in Ottawa, ON. Full work authorization in Canada — Canadian roles (including relocation within Canada) score **Not needed** on work authorization, no location penalty, regardless of remote/hybrid/on-site.
 
@@ -81,10 +81,14 @@ Do not use generic scripts with placeholder numbers until the user fills in `com
 **Remote-dimension scoring:** hybrid outside Canada scores **3.0**, not 1.0. Reserve 1.0 for "on-site 4-5 days/week, no exceptions" in a location with no entry path.
 
 **Targeting priority:**
-(a) Canadian roles matching the target archetypes — no visa friction;
-(b) US roles at companies with a **known Canadian entity or Canada+US presence** — the L-1A signal, and the highest-value category;
-(c) US roles whose title plausibly qualifies as TN "Engineer"/"Computer Systems Analyst";
-(d) US roles with O-1A-friendly language ("recognized expert", "thought leadership") or explicit sponsorship.
+(a) **Toronto-area geospatial/mapping roles at big-tech-tier employers that have BOTH a Canadian office and a US entity, with a manager-track title** — this is the active strategy and outranks everything else;
+(b) other Canadian roles matching the target archetypes — no work-authorization friction;
+(c) US roles at companies with a known Canadian entity or Canada+US presence;
+(d) US roles whose title plausibly qualifies as TN "Engineer"/"Computer Systems Analyst".
+
+**Manager titles outrank IC titles at equal comp** — a documented managerial track record is a prerequisite for the permanent-residency route being pursued. Note this in the report when an otherwise-good role is IC-only.
+
+**Ottawa roles are deprioritized** unless exceptional: the local band caps out below the Toronto band, and relocation to Toronto is planned.
 
 Always name which pathway a match plausibly supports. Never treat "US role" as a single category.
 

@@ -166,6 +166,44 @@ tracked_companies:
     notes: "CA+US entity; mapping. Toronto office confirmed via live JD (Senior EM, Mapping, req 110805)."
     enabled: true
 
+  # -- PHASE 1 TARGETS: Toronto geospatial/mapping at big-tech-tier employers
+  #    with a US entity (internal-transfer signal). Manager titles preferred. --
+
+  - name: Google
+    careers_url: https://www.google.com/about/careers/applications/jobs/results/?location=Toronto
+    scan_method: websearch
+    scan_query: 'site:google.com/about/careers ("Engineering Manager" OR "Technical Lead Manager" OR "Staff Software Engineer") (Maps OR geospatial OR mapping) Toronto OR Waterloo'
+    notes: "CA+US entity; geospatial. Waterloo/Toronto/Montreal - Google Maps."
+    enabled: true
+
+  - name: Amazon
+    careers_url: https://www.amazon.jobs/en/search?base_query=geospatial&loc_query=Canada
+    scan_method: websearch
+    scan_query: 'site:amazon.jobs ("Software Development Manager" OR "Senior Manager" OR "Principal Engineer") (geospatial OR mapping OR Kuiper OR Leo) Toronto OR Vancouver'
+    notes: "CA+US entity; geospatial. Toronto/Vancouver - Maps, logistics geospatial, Leo/Kuiper. Runs L-1 at scale."
+    enabled: true
+
+  - name: Uber
+    careers_url: https://www.uber.com/us/en/careers/list/?location=CAN-Ontario-Toronto
+    scan_method: websearch
+    scan_query: 'site:uber.com/careers ("Engineering Manager" OR "Senior Software Engineer") (Maps OR mapping OR geospatial) Toronto'
+    notes: "CA+US entity; mapping. Toronto engineering presence."
+    enabled: true
+
+  - name: Microsoft
+    careers_url: https://jobs.careers.microsoft.com/global/en/search?lc=Canada
+    scan_method: websearch
+    scan_query: 'site:jobs.careers.microsoft.com ("Software Engineering Manager" OR "Principal Software Engineer") (Maps OR geospatial) Toronto OR Vancouver'
+    notes: "CA+US entity; geospatial. Bing/Azure Maps."
+    enabled: true
+
+  - name: Apple
+    careers_url: https://jobs.apple.com/en-ca/search?location=canada-CANC
+    scan_method: websearch
+    scan_query: 'site:jobs.apple.com ("Engineering Manager" OR "Senior Software Engineer") (Maps OR geospatial) Canada'
+    notes: "CA+US entity; mapping. Ottawa office - Apple Maps."
+    enabled: true
+
   # -- SatCom/aerospace/mapping majors without a confirmed zero-token ATS API;
   #    fall back to websearch until a direct API is found (see /career-ops discover) --
 
