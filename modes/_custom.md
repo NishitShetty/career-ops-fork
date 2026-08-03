@@ -30,7 +30,21 @@
      - Cap each batch run at 20 listings unless I say otherwise.
      - If a report scores below 6, skip the cover letter. -->
 
-(none yet -- add yours above)
+### Repo boundary — long-term strategy is out of scope here
+
+This repo evaluates individual job postings. **Long-term career and immigration
+strategy lives in a separate private repo (`career`) and is not this repo's job.**
+
+- The `<!-- BEGIN DERIVED ... -->` block in `modes/_profile.md` is **generated**.
+  Do not edit inside the sentinels, and do not expand it. Changes are made in the
+  `career` repo, re-pasted, and verified with its `check.sh`.
+- Use that block to **score work authorization on a specific posting**. Do not
+  reason beyond it, extrapolate from it, or answer open-ended immigration or
+  career-strategy questions from it — those belong in the other repo.
+- Never copy family details, visa-application outcomes, or salary figures into
+  this repo. It is a fork of a public repository.
+- If you recall immigration strategy that is not present in that block, it is
+  stale. Do not use it.
 
 ## Custom Workflows
 

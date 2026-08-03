@@ -56,25 +56,22 @@ narrative:
       hero_metric: "Prevented a redundant 3-month kernel migration"
 
 compensation:
-  # Current: CAD 175,000 (~USD 128,000 at 0.73). The USD gap to US big-tech-tier
-  # Staff/L6 (~USD 570K median) is roughly 4.5x — always compare in USD, never
-  # conflate the CAD figure with US bands.
+  # NOTE: this file holds facts with no expiry date. Market comparisons and
+  # research figures rot -- keep those in the career repo, not here.
+  # When comparing to US bands, always convert to USD first.
   current: "CAD 175,000"
   # TODO(user): target range still not set — ask before generating negotiation
   # scripts or stating a number in any application.
   target_range: "TBD"
   currency: "CAD"
   minimum: "TBD"
-  location_flexibility: "Based in Stittsville/Ottawa, ON. Open to relocation within Canada (e.g. Toronto) and to US roles per visa strategy below."
+  location_flexibility: "Based in Stittsville/Ottawa, ON. Open to relocation within Canada (e.g. Toronto) and to US roles per the Location Policy in modes/_profile.md."
 
 location:
   country: "Canada"
   city: "Stittsville, ON (Ottawa area)"
   timezone: "EST"
-  # Nuance: Canadian citizen (no Canada work-auth issue) but born in India, which
-  # governs US Green Card chargeability/backlogs. See modes/_profile.md
-  # "Your Location Policy" for the full TN / L-1A / O-1A / H-1B strategy.
-  visa_status: "Canadian citizen — full work authorization in Canada. For the US: no current work authorization. Chargeability is India (country of birth), so EB-2 India is UNAVAILABLE and EB-1 India sits at Oct 2022 (~3.8yr) — EB-1 is NOT a bypass. Priority order: (1) verify possible cap-exempt H-1B from 2018 records, (2) verify spouse cross-chargeability under INA 202(b)(2), (3) L-1A->EB-1C after 12mo managerial repositioning, (4) O-1A then EB-1A, (5) TN as a bridge only (single-intent trap). See modes/_profile.md for full detail and caveats."
+  visa_status: "Canadian citizen — full Canadian work authorization. US: none currently. Permanent-residency queueing follows country of birth, not citizenship. Current posture and pathway ranking: modes/_profile.md -> Your Location Policy (DERIVED block)."
   authorized_in: ["Canada"]
   needs_sponsorship: true
 

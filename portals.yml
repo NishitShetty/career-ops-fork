@@ -1,12 +1,21 @@
 # Portal Scanner Configuration
 # Used by /career-ops scan to discover new offers automatically.
 # Customized for: Senior Systems Architect / Technical & Delivery Lead,
-# SatCom / Geospatial / Mapping domain, Canada (home) + US (TN/L-1A/O-1A/H-1B) targeting.
+# SatCom / Geospatial / Mapping domain, Canada + US targeting.
+#
+# Company `notes:` use a fixed tag vocabulary so they stay operational and
+# never go stale:
+#   "CA-based; <domain>"        home turf, no work-authorization friction
+#   "CA+US entity"              dual presence — highest-priority category
+#   "US-only"                   work authorization must be checked per role
+#   "domain-adjacent"           partial domain match
+# Selection rationale (why each company is here) lives in the career repo,
+# not in this file.
 
 # -- Location filter --
-# Home region (Canada) always passes; US passes too since US roles are an
-# active immigration-strategy target, not excluded. A handful of clearly
-# irrelevant overseas regions are blocked to keep the scan focused.
+# Home region (Canada) always passes; US passes too (US roles are targeted,
+# not excluded). A handful of clearly irrelevant overseas regions are blocked
+# to keep the scan focused.
 location_filter:
   always_allow:
     - "Canada"
@@ -96,16 +105,16 @@ search_queries:
     query: 'site:jobs.lever.co ("Systems Architect" OR "Solutions Architect" OR "Engineering Manager" OR "Technical Program Manager") ("mapping" OR "geospatial" OR "satellite" OR "SatCom")'
     enabled: true
 
-  # -- US visa-strategy long shots (TN / L-1A / O-1A explicitly mentioned) --
-  - name: Greenhouse — TN/L-1A/O-1A friendly roles
+  # -- Sponsorship-language roles (JD text explicitly mentions a route) --
+  - name: Greenhouse — sponsorship-language roles
     query: 'site:boards.greenhouse.io ("Systems Architect" OR "Technical Lead" OR "Engineering Manager") ("TN visa" OR "L-1A" OR "O-1" OR "visa sponsorship")'
     enabled: true
 
 # -- Tracked companies --
 # Curated set verified against live Greenhouse/Lever/Ashby APIs (zero-token
 # check) for the SatCom/geospatial/mapping domain plus known Canada+US dual
-# presence (L-1A signal). Smaller and hand-picked rather than a broad generic
-# list — extend as you find more via /career-ops discover.
+# presence. Smaller and hand-picked rather than a broad generic list —
+# extend as you find more via /career-ops discover.
 
 tracked_companies:
 
@@ -114,39 +123,39 @@ tracked_companies:
   - name: Telesat
     careers_url: https://jobs.lever.co/telesat
     api: https://api.lever.co/v0/postings/telesat?mode=json
-    notes: "Ottawa, ON. Canadian satellite operator — direct SatCom domain match, no visa friction (Canada-based)."
+    notes: "CA-based; satcom. Ottawa, ON — Canadian satellite operator."
     enabled: true
 
   - name: Kepler Communications
     careers_url: https://jobs.lever.co/kepler
     api: https://api.lever.co/v0/postings/kepler?mode=json
-    notes: "Toronto, ON HQ with a 'Kepler US' entity — direct satcom/space match AND a live L-1A signal (Canada+US presence)."
+    notes: "CA+US entity; satcom. Toronto, ON HQ with a 'Kepler US' entity."
     enabled: true
 
-  # -- Mapping / geospatial, US-based (TN / L-1A / O-1A targets) --
+  # -- Mapping / geospatial, US-based --
 
   - name: Esri
     careers_url: https://job-boards.greenhouse.io/esri
     api: https://boards-api.greenhouse.io/v1/boards/esri/jobs
-    notes: "Redlands, CA. Market-leading GIS/geospatial software — direct domain match."
+    notes: "US-only; geospatial. Redlands, CA — market-leading GIS software."
     enabled: true
 
   - name: Mapbox
     careers_url: https://jobs.ashbyhq.com/mapbox
     api: https://api.ashbyhq.com/posting-api/job-board/mapbox
-    notes: "US. Mapping/geospatial platform — direct domain match."
+    notes: "US-only; geospatial. Mapping platform."
     enabled: true
 
   - name: Niantic
     careers_url: https://jobs.ashbyhq.com/niantic
     api: https://api.ashbyhq.com/posting-api/job-board/niantic
-    notes: "US. Geospatial/AR mapping (Niantic Spatial) — direct domain match."
+    notes: "US-only; geospatial. AR mapping (Niantic Spatial)."
     enabled: true
 
   - name: Zoox
     careers_url: https://jobs.lever.co/zoox
     api: https://api.lever.co/v0/postings/zoox?mode=json
-    notes: "Foster City, CA (Amazon). Autonomy/mapping stack — adjacent domain match."
+    notes: "domain-adjacent; mapping. Foster City, CA (Amazon) — autonomy stack."
     enabled: true
 
   # -- Rideshare/mapping, already in pipeline via Lyft --
@@ -154,7 +163,7 @@ tracked_companies:
   - name: Lyft
     careers_url: https://app.careerpuck.com/job-board/lyft
     api: https://boards-api.greenhouse.io/v1/boards/lyft/jobs
-    notes: "Toronto office confirmed via live JD (Senior EM, Mapping, req 110805). Mapping team = direct domain match."
+    notes: "CA+US entity; mapping. Toronto office confirmed via live JD (Senior EM, Mapping, req 110805)."
     enabled: true
 
   # -- SatCom/aerospace/mapping majors without a confirmed zero-token ATS API;
@@ -164,26 +173,26 @@ tracked_companies:
     careers_url: https://mda.space/careers
     scan_method: websearch
     scan_query: 'site:mda.space "Systems Architect" OR "Engineering Manager" OR "Technical Lead"'
-    notes: "Brampton, ON. Canadian space/satellite prime (RADARSAT) — direct domain match, no visa friction."
+    notes: "CA-based; satcom. Brampton, ON — space/satellite prime (RADARSAT)."
     enabled: true
 
   - name: Viasat
     careers_url: https://careers.viasat.com
     scan_method: websearch
     scan_query: 'site:careers.viasat.com "Systems Architect" OR "Engineering Manager" OR "Technical Lead"'
-    notes: "Carlsbad, CA. SatCom major — direct domain match, US-based (visa strategy applies)."
+    notes: "US-only; satcom. Carlsbad, CA — SatCom major."
     enabled: true
 
   - name: Hughes Network Systems
     careers_url: https://www.hughes.com/about-us/careers
     scan_method: websearch
     scan_query: 'site:hughes.com/about-us/careers "Systems Architect" OR "Engineering Manager"'
-    notes: "Germantown, MD. SatCom major — direct domain match, US-based (visa strategy applies)."
+    notes: "US-only; satcom. Germantown, MD — SatCom major."
     enabled: true
 
   - name: HERE Technologies
     careers_url: https://www.here.com/company/careers
     scan_method: websearch
     scan_query: 'site:here.com "Systems Architect" OR "Engineering Manager" OR "Technical Lead" mapping'
-    notes: "Amsterdam/Chicago. Mapping platform — direct domain match; check for a US or Canada entity per role."
+    notes: "domain-adjacent; mapping. Amsterdam/Chicago — verify entity per role."
     enabled: true

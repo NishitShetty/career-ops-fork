@@ -135,6 +135,7 @@ plan/
 !portals.yml
 !modes/_profile.md
 !modes/_custom.md
+!modes/_brief.md
 !data/applications.md
 !reports/*.md
 !interview-prep/*.md
