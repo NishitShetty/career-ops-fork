@@ -21,16 +21,22 @@
 
 **The strategic read: your DSA gap is the one thing standing between you and roles you're otherwise over-qualified for.** Don't over-invest in Scala at the expense of it — Scala helps at exactly one employer; DSA gates all of them.
 
+> **The research confirmed this and sharpened it.** Tesla's own screen allows **language of choice and open docs**, their JD says Scala is *preferred* not required, and the team already runs Python alongside Scala. Meanwhile a confirmed 2025 Tesla loop included a straight LeetCode graph question. **Prepare the Akka/actor-model *concepts*, not Scala syntax — and spend the saved time on DSA reps.** Suggested split for a ~65-hour, 6-week sprint: **40% DSA, 20% system design, 15% Scala/Akka concepts, 12% energy domain, 10% behavioural + Evidence of Excellence, 3% systems articulation.**
+
 ---
 
 ## Phase 1 — Weeks 1–4: DSA core patterns
 
-**Goal: rebuild fluency in the 8 patterns that cover the large majority of interview questions.** Not breadth — fluency.
+**Goal: rebuild fluency in the patterns that cover the large majority of interview questions.** Not breadth — fluency.
+
+> **Revised 2026-08-03 after the Tesla research.** Two changes: **graphs moved earlier** (a confirmed 2025 Tesla loop included a straight 30-minute LeetCode graph question), and a **streaming/time-series cluster added** in week 4 — Tesla teams write ~50-60% of their own questions from their own domain, so telemetry-shaped problems are the likeliest source. Target **medium in 30-35 min, in Go or Python, with docs open** (Tesla's screen allows both docs and language of choice).
 
 - [ ] **Week 1 — Baseline + arrays/strings/hashing.** Do 3 timed medium problems *cold* on day 1 before studying anything, and record honestly how it went. That's your baseline. Then: two pointers, sliding window, frequency maps.
-- [ ] **Week 2 — Binary search + sorting.** Search on sorted arrays, search on answer space, interval merging. Binary search on the answer is the highest-leverage single pattern; know it cold.
-- [ ] **Week 3 — Trees + graphs.** BFS, DFS, level-order traversal, topological sort, cycle detection, union-find. Graph traversal is the most-asked category at senior level.
-- [ ] **Week 4 — Heaps, stacks/queues, and consolidation.** Top-K, merge-K, monotonic stack. Re-do the week-1 baseline problems and compare.
+- [ ] **Week 2 — Graphs + trees.** BFS, DFS, level-order, topological sort, cycle detection, union-find. **Highest priority of the four weeks** — most-asked at senior level and confirmed in a real Tesla loop.
+- [ ] **Week 3 — Binary search, heaps, intervals.** Search on sorted arrays and on the answer space; top-k and merge-k; interval merging; monotonic stack.
+- [ ] **Week 4 — Streaming / time-series cluster + consolidation.** Rate limiter (sliding window log, then counter — know the memory/accuracy trade-off), sliding-window aggregation, rolling median, out-of-order event dedup, TTL cache with LRU eviction. Re-do the week-1 baseline problems and compare.
+
+**Practise on CoderPad specifically**, out loud — that's the platform Tesla's technical screen uses.
 
 **Method that matters more than the problem count:**
 - **Timebox 35 minutes.** If stuck at 35, read the solution, understand it, and re-implement from scratch the next day. Grinding for 2 hours teaches you very little.
@@ -54,6 +60,8 @@
 - [ ] **Weeks 9–11 — Build the project.** Scope discipline over completeness.
 - [ ] **Week 12 — Mocks.** At least 3: one DSA, one system design, one behavioral. Use a peer or a paid service (interviewing.io, Pramp). **Recording yourself and rewatching is unpleasant and unusually effective.**
 - [ ] Write STAR stories into `interview-prep/story-bank.md` — you already have excellent raw material (bootloader audit, Keycloak stalemate, Connector-3 overnight re-plan, 4 AM demo fix, HackRF improvisation).
+- [ ] **Build the "Evidence of Excellence" deck** — a 30-minute presentation on the **U-Boot bootloader memory audit**. Tesla runs this as a real onsite round and it is a distinctive part of their hiring. Do not lead with the Helm pipeline; a hundred other candidates have that story. Details in [tesla-distributed-systems-engineer.md](tesla-distributed-systems-engineer.md).
+- [ ] **Write two failure stories** — a design decision you got wrong and how you detected it, and a time you were the bottleneck. Tesla's stated values include *self-awareness* and *vulnerability*, which is a near-explicit request for these. Most candidates bring only triumphs.
 
 ---
 
