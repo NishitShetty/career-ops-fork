@@ -54,7 +54,22 @@ strategy lives in a separate private repo (`career`) and is not this repo's job.
      - "prep <company>": pull the JD, generate STAR stories from
        article-digest.md, and draft 5 likely interview questions. -->
 
-(none yet -- add yours above)
+### Discovery: prefer aggregators over exhaustive scanning for broad, cross-archetype search
+
+Decided 2026-08-03. `node scan.mjs` (zero-token, Greenhouse/Ashby/Lever APIs) is precise
+but limited to `tracked_companies` in `portals.yml` — a curated, mostly-satcom list.
+Since the target is now broadened to SDE/TPM/PM/EM across ANY Ottawa/Toronto employer
+clearing the comp floor, `scan.mjs` alone under-covers badly — it can't discover a
+company that isn't already on the list.
+
+**For broad discovery, use external aggregators (LinkedIn/Indeed saved alerts, per the
+setup given directly to the user) as the primary net, not agent-driven WebSearch
+scanning company-by-company** — that would burn tokens re-deriving what a free daily
+email alert already does better and continuously. `scan.mjs` stays the fast, zero-token
+tool for the tracked domain-relevant company list specifically.
+
+Paste any URLs the user finds via aggregators into `data/pipeline.md` and run
+`/career-ops pipeline` as normal.
 
 ## Output Preferences
 

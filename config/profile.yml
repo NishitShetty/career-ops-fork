@@ -19,6 +19,9 @@ target_roles:
   primary:
     - "Senior Systems Architect"
     - "Technical & Delivery Lead"
+  # Widened 2026-08-03: open to SDE/TPM/PM/EM broadly in Ottawa or Toronto,
+  # not just architecture-track roles, provided comp clears CAD 200K+.
+  # See modes/_brief.md Hard DQ / Location Scoring for the comp floor.
   archetypes:
     - name: "Product Delivery Lead / Single-Threaded Owner"
       level: "Senior/Staff"
@@ -26,10 +29,16 @@ target_roles:
     - name: "Senior Systems / Solutions Architect"
       level: "Senior/Staff"
       fit: "primary"
+    - name: "Senior/Staff Software Engineer (IC)"
+      level: "Senior/Staff"
+      fit: "primary"
     - name: "Engineering Manager (technical, hands-on)"
       level: "Senior"
       fit: "secondary"
     - name: "Technical Program Manager"
+      level: "Senior"
+      fit: "secondary"
+    - name: "Product Manager (technical)"
       level: "Senior"
       fit: "secondary"
     - name: "Principal/Staff Software Engineer"
@@ -60,12 +69,13 @@ compensation:
   # research figures rot -- keep those in the career repo, not here.
   # When comparing to US bands, always convert to USD first.
   current: "CAD 175,000"
-  # TODO(user): target range still not set — ask before generating negotiation
-  # scripts or stating a number in any application.
-  target_range: "TBD"
+  # Floor set 2026-08-03: candidate confirmed CAD 200K+ as the hard comp
+  # requirement across all archetypes (SDE/TPM/PM/EM). No upper target set
+  # yet — do not invent a ceiling for negotiation scripts.
+  target_range: "CAD 200,000+"
   currency: "CAD"
-  minimum: "TBD"
-  location_flexibility: "Based in Stittsville/Ottawa, ON. Open to relocation within Canada (e.g. Toronto) and to US roles per the Location Policy in modes/_profile.md."
+  minimum: "CAD 200,000"
+  location_flexibility: "Open to Ottawa or Toronto, ON. Open to relocation within Canada and to US roles per the Location Policy in modes/_profile.md."
 
 location:
   country: "Canada"

@@ -15,21 +15,36 @@
 
 ## Identity
 Product Delivery Lead / Senior Systems Architect — 11+ yrs SatCom (L1/L3, NMS, geospatial).
-Ottawa, ON (ET). Canadian citizen: **no constraint for Canadian roles**. US roles need a
-work-authorization route — see Hard DQ below.
+Ottawa, ON (ET), open to Toronto. Canadian citizen: **no constraint for Canadian roles**.
+US roles need a work-authorization route — see Hard DQ below.
 
 ## Target Archetypes
+
+**Widened 2026-08-03: open to SDE (IC), TPM, PM, and EM broadly — not just
+architecture-track roles — provided comp clears the CAD 200K floor.** Archetype match
+still affects the score (better match = easier framing = higher confidence), but a
+strong-comp Ottawa/Toronto role should not be filtered solely for being IC or PM rather
+than an architecture/delivery title.
 
 | # | Archetype | What they buy (proof) |
 |---|-----------|----------------------------|
 | 1 | **Product Delivery Lead / Single-Threaded Owner** | Owned NMS Map Visualization end-to-end across 6 Epics, aligning PM/architects/UX |
 | 2 | **Senior Systems / Solutions Architect** | Vector Tiles vs GeoJSON POC; broke a month-long Keycloak stalemate; ERD/Maestro standard adopted org-wide |
-| 3 | **Engineering Manager (technical, hands-on)** | Matrix leadership across Belgium/USA/Canada; Scrum Master; PI planning |
-| 4 | **Technical Program Manager** | Overnight "Connector-3" re-plan with successful stakeholder readout |
-| 5 | **Principal / Staff Engineer** | U-Boot bootloader memory audit; HackRF spectrum-analyzer workaround |
+| 3 | **Senior/Staff Software Engineer (IC)** | 11+ yrs building/operating distributed systems for device fleets; U-Boot bootloader audit; memory/CPU leak profiling |
+| 4 | **Engineering Manager (technical, hands-on)** | Matrix leadership across Belgium/USA/Canada; Scrum Master; PI planning — see prep note below |
+| 5 | **Technical Program Manager** | Overnight "Connector-3" re-plan with successful stakeholder readout |
+| 6 | **Product Manager (technical)** | STO stakeholder alignment (PM/architects/UX); customer-centric NMS roadmap input — see prep note below |
 
 Analog titles that count as hits: Delivery Manager, Technical Product Manager (infra),
-Ground Segment Lead, Platform Architect, Geospatial Engineering Lead.
+Ground Segment Lead, Platform Architect, Geospatial Engineering Lead, Software
+Development Engineer, SDE II/III/Senior.
+
+**Prep note for EM/PM archetypes:** candidate has no formal people-management title and
+no formal product-ownership title. Real leadership/stakeholder evidence exists (STO,
+Scrum Master, matrix PI planning) but external hire into first-time EM or PM is harder
+than IC hire — see `career` repo `decisions.md` (2026-08-03 refinement: prefer landing
+as IC/architect-track first, convert internally). Don't auto-fail EM/PM postings on this
+basis, but flag the stretch in the report.
 
 ## Proof Points (use exact metrics in matching)
 - NMS Map Visualization capability — single-threaded owner across **6 Epics**
@@ -40,14 +55,16 @@ Ground Segment Lead, Platform Architect, Geospatial Engineering Lead.
 ## Comp Strategy
 | Target | Requirement |
 |--------|-------------|
-| — | **Not yet set.** `config/profile.yml → compensation.target_range` is `TBD`. |
+| **CAD 200,000+** | **Hard floor, set 2026-08-03.** Applies across all archetypes (SDE/TPM/PM/EM). No ceiling target set — do not invent one for negotiation scripts. |
 
-**No hard comp floor is defined. Do not FAIL a role on comp, and do not invent a
-number — flag comp as unscored and ask the user.** Current comp is CAD 175,000.
+Current comp is CAD 175,000. A role stating comp clearly below CAD 200K should score
+low on Comp (not an automatic Hard DQ — see below — but treat as a strong red flag);
+a role with no stated comp is scored **Unstated/neutral**, not penalized.
 
 ## Location Scoring
 - Fully remote / async-first → **5.0**
-- Canada — remote, hybrid, or on-site (incl. relocation within Canada) → **5.0**, no penalty
+- **Ottawa or Toronto**, ON — remote, hybrid, or on-site → **5.0**, no penalty
+- Other Canada — remote, hybrid, or on-site (incl. relocation) → **5.0**, no penalty
 - Hybrid outside Canada → **3.0** (not 1.0)
 - On-site outside Canada, 4-5 days/week with no exceptions → **1.0**
 - High travel (>25%) → deduct 0.5-1.0
@@ -77,15 +94,16 @@ default **3.5**), matching the verdict table in `modes/triage.md`.
 | < 3.0 | **FAIL** | Does not clear the bar — filtered |
 
 ## Soft Red Flags (−0.5 each, additive)
+- Stated comp below the CAD 200,000 floor (−1.0, not −0.5 — this one is load-bearing)
 - Pure people-management with no technical depth (loses the cross-cutting advantage)
 - Domain with no SatCom/geospatial/infra adjacency — needs a full framing rewrite
 - US role with no identifiable Canadian entity (no intracompany-transfer signal)
 - Requires a portfolio/public GitHub (none currently exists — do not fabricate one)
 
 ## Priority Override List — always return PASS regardless of score
-Phase 1 strategy: **Toronto-area geospatial/mapping at big-tech-tier employers that
-have both a Canadian office and a US entity.** Manager-track titles preferred over IC
-at equal comp — a documented managerial record is a prerequisite downstream.
+Phase 1 strategy: **Ottawa- or Toronto-area roles (any of SDE/TPM/PM/EM) at big-tech-tier
+employers that have both a Canadian office and a US entity, clearing CAD 200K+.**
+Geospatial/mapping domain match is a bonus, not a requirement, for this override list.
 - **Amazon** — CA+US entity, runs intracompany transfers at scale, Maps + Leo/Kuiper
 - **Google** — Waterloo/Toronto/Montreal; Google Maps
 - **Uber** / **Lyft** — Toronto engineering; mapping orgs; CA+US entity

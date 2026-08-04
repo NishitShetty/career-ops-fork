@@ -51,7 +51,7 @@ Do not use generic scripts with placeholder numbers until the user fills in `com
 > Long-term immigration strategy lives in the `career` repo, not here. The block below is generated from it.
 > **Do not edit inside the sentinels** — edit `career/digest.md`, bump the version stamp, re-paste, and run `career/check.sh`.
 
-<!-- BEGIN DERIVED FROM career@digest.md · v2026-08-03.2 · DO NOT EDIT HERE -->
+<!-- BEGIN DERIVED FROM career@digest.md · v2026-08-03.3 · DO NOT EDIT HERE -->
 
 **Base case:** Canadian citizen based in Ottawa, ON. Full work authorization in Canada — Canadian roles (including relocation within Canada) score **Not needed** on work authorization, no location penalty, regardless of remote/hybrid/on-site.
 
@@ -88,7 +88,7 @@ Do not use generic scripts with placeholder numbers until the user fills in `com
 
 **Manager-track titles are preferred but NOT required.** A documented managerial record is a prerequisite for the permanent-residency route, but external hire into first-time people management is hard, and internal IC-to-manager conversion is materially easier. So: **do not down-score a strong, high-comp Canadian role at an employer with a US entity merely because it is IC.** Note the trade in the report, flag whether an internal management track is visible, and treat manager postings as worth applying to even when they are a stretch.
 
-**Ottawa roles are deprioritized** unless exceptional: the local band caps out below the Toronto band, and relocation to Toronto is planned.
+**Ottawa and Toronto are both accepted** — updated 2026-08-03: candidate is open to either city across SDE/TPM/PM/EM archetypes, provided compensation clears the floor set in `config/profile.yml -> compensation.minimum`. Toronto still carries a structural edge (higher band ceiling, and it's where the CA+US-entity intracompany-transfer strategy is anchored), so prefer Toronto when two roles are otherwise comparable — but do not filter out a strong-comp Ottawa role for location alone.
 
 Always name which pathway a match plausibly supports. Never treat "US role" as a single category.
 

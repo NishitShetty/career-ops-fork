@@ -58,6 +58,15 @@ title_filter:
     - "Principal Engineer"
     - "Staff Engineer"
     - "Systems Engineer"
+    - "Software Engineer"
+    - "Software Development Engineer"
+    - "SDE"
+    # -- Widened 2026-08-03: candidate is open to TPM/PM/SDE/EM broadly, not
+    #    just architecture-track roles, as long as comp clears CAD 200K+. --
+    - "Product Manager"
+    - "Group Product Manager"
+    - "Senior Product Manager"
+    - "Program Manager"
     # -- Domain match --
     - "Geospatial"
     - "Mapping"
@@ -89,6 +98,15 @@ title_filter:
     - "Head"
     - "Director"
     - "Manager"
+
+# -- Salary filter (optional; opt-in) --
+# Only applies where the ATS provider exposes salary data (Greenhouse, Ashby,
+# Lever) — has no effect on scan_method: websearch entries. min is annual, in
+# the currency below; roles with no salary data still pass (see scan.mjs).
+salary_filter:
+  min: 200000
+  max: 0
+  currency: "CAD"
 
 # -- Search queries --
 # Each query triggers a WebSearch. Use site: to filter by portal.
