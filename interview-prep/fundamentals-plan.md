@@ -44,6 +44,10 @@
 - **[Pramp](https://www.pramp.com/)** — free, peer-matched, both DSA and system design.
 - **[interviewing.io](https://interviewing.io/)** — paid, anonymized real engineers, higher signal, worth it once in the last 2-3 weeks before a real loop.
 
+**Pattern recognition (the diagnostic layer):**
+- **`~/github/career/dsa/pattern-diagnostic.html`** — open in a browser. Problem statement → pattern → approach: a 60-second triage script, the constraints→complexity budget, 47 searchable signals, a decision flowchart, 14 pattern cards, and a composite-problems section for two-pattern problems. This is the layer NeetCode's tree and the UCSD course theory both skip, and it's the skill that decides interviews. Use it *while* doing Phase 1 — predict the pattern before solving, then check.
+- [AlgoMonster templates](https://algo.monster/templates/backtracking-aggregation) — code skeletons per pattern, deliberately not duplicated in the diagnostic. The diagnostic tells you which template; this gives you the skeleton.
+
 **Project hosting:** a public GitHub repo with a real README is the deliverable — `config/profile.yml` currently has no `portfolio_url`/`github`, which is a flagged gap on every application. Fixing that is part of this plan, not optional.
 
 ---

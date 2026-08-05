@@ -67,6 +67,12 @@ title_filter:
     - "Group Product Manager"
     - "Senior Product Manager"
     - "Program Manager"
+    # -- Added 2026-08-04 via `titles` mode. Pivot axis: evidenced by
+    #    customer-facing SAT/deployment work and the live-executive-demo
+    #    fix for Inmarsat. Honest gap accepted: no quota-carrying
+    #    pre-sales experience -- expect this to be probed in interviews. --
+    - "Solutions Engineer"
+    - "Sales Engineer"
     # -- Domain match --
     - "Geospatial"
     - "Mapping"
