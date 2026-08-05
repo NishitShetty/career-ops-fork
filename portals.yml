@@ -150,6 +150,19 @@ tracked_companies:
     notes: "CA+US entity; satcom. Toronto, ON HQ with a 'Kepler US' entity."
     enabled: true
 
+  - name: Owner
+    careers_url: https://jobs.ashbyhq.com/owner
+    api: https://api.ashbyhq.com/posting-api/job-board/owner
+    notes: "US-only; adjacent. Remote US/Canada — verify Canadian entity/EOR before applying; comp posted in USD."
+    enabled: true
+
+  - name: Shopify
+    careers_url: https://www.shopify.com/careers
+    scan_method: websearch   # no public Greenhouse/Lever/Ashby/Workday API (confirmed via discover-ats.mjs)
+    scan_query: 'site:shopify.com/careers ("Software Engineer" OR "Engineering Manager" OR "Technical Program Manager" OR "Staff" OR "Principal") (backend OR infrastructure OR platform OR distributed)'
+    notes: "CA-based; adjacent. Ottawa, ON HQ — home turf, no work-authorization friction. websearch-only, needs agent-driven scan mode (see note below)."
+    enabled: false   # websearch-only: needs the agent-driven scan mode, same as the Phase 1 big-tech entries
+
   # -- Mapping / geospatial, US-based --
 
   - name: Esri
