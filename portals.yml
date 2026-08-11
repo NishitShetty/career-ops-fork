@@ -67,6 +67,10 @@ title_filter:
     - "Group Product Manager"
     - "Senior Product Manager"
     - "Program Manager"
+    # -- Added 2026-08-11: Google Geo posts these in the JD body even when the
+    #    listing title is the generic "Product Manager". --
+    - "Technical Product Manager"
+    - "Data Product Manager"
     # -- Added 2026-08-04 via `titles` mode. Pivot axis: evidenced by
     #    customer-facing SAT/deployment work and the live-executive-demo
     #    fix for Inmarsat. Honest gap accepted: no quota-carrying

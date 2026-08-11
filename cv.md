@@ -46,7 +46,7 @@ Technical Product / Delivery Leader with 11+ years of experience across the Sate
 
 - **Product/Delivery:** Feature roadmap strategy, Single-Threaded Ownership (STO), Agile/Scrum, Scrum Master, matrix/distributed team leadership, PI planning, stakeholder management
 - **Domain:** SatCom (L1/L3), QoS, SDN, Geospatial Visualization (Vector Tiles, GeoJSON), Network Management Systems (NMS)
-- **Tech Stack:** Go, Python, Java, GraphQL, Kubernetes, Helm, AWS, PostgreSQL, GitLab CI/CD
+- **Tech Stack:** Go, Python, JS/TS, Java, SQL, GraphQL, Kubernetes, Helm, AWS, PostgreSQL, GitLab CI/CD
 
 ## Languages
 

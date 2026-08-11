@@ -41,6 +41,12 @@ target_roles:
     - name: "Product Manager (technical)"
       level: "Senior"
       fit: "secondary"
+    # Added 2026-08-11: the Google Geo reqs post as "Technical Product Manager"
+    # and "Data Product Manager" in the JD body even when the listing title is
+    # just "Product Manager". Named explicitly so the scanner matches them.
+    - name: "Technical Product Manager"
+      level: "Senior"
+      fit: "secondary"
     - name: "Principal/Staff Software Engineer"
       level: "Senior/Staff"
       fit: "adjacent"
