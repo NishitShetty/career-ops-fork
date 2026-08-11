@@ -2,6 +2,9 @@
 
 | # | Date | Company | Role | Score | Status | PDF | Report | Notes |
 |---|------|---------|------|-------|--------|-----|--------|-------|
+| 7 | 2026-08-11 | Anthropic | Technical Program Manager, Infrastructure | 4.1/5 | Evaluated | ❌ | [007](../reports/007-anthropic-2026-08-11.md) | Best archetype fit of 3 Anthropic roles; job id 5111783008; sponsors visas; NYC option; USD 290-365K |
+| 8 | 2026-08-11 | Anthropic | Staff+ Software Engineer, Platform | 3.6/5 | Evaluated | ❌ | [008](../reports/008-anthropic-2026-08-11.md) | Strong stack overlap but Staff+ bar is a stretch; job id 5157847008; NYC preferred by team; USD 405-485K |
+| 9 | 2026-08-11 | Anthropic | Senior Staff+ Software Engineer, Kubernetes Platform | 3.0/5 | SKIP | ❌ | [009](../reports/009-anthropic-2026-08-11.md) | K8s internals required well beyond user level; job id 5211241008; recommend 007 instead |
 | 5 | 2026-08-04 | Owner | Founding PM, Reporting & Agentic Insights | 2.1/5 | Discarded | ❌ | [005](../reports/005-owner-2026-08-04.md) | Remote US/Canada, USD 190-230K. Hard gap: 5+ yrs PM experience required, zero on record. Founding PM is the hardest entry point for a first-time PM title - target PM roles with existing team/process instead. |
 | 6 | 2026-08-04 | Owner | Senior Software Engineer, Mobile Platform - Guest App | 2.2/5 | Discarded | ❌ | [006](../reports/006-owner-2026-08-04.md) | Remote, Canada (explicit in title) - useful signal Owner has a real Canada-hiring track. USD 190-220K. Skills gap too narrow/specific: React Native, App Store/Play distribution, no mobile experience on record. |
 | 3 | 2026-08-04 | Shopify | Applied Machine Learning Engineers | 1.8/5 | Discarded | ❌ | [003](../reports/003-shopify-2026-08-04.md) | Ottawa HQ, remote-Americas. ML-specialist role, skills mismatch (no TF/PyTorch/LLM experience). Kept Shopify tracked for backend/infra reqs instead. |
