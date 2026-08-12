@@ -2,6 +2,7 @@
 
 | # | Date | Company | Role | Score | Status | PDF | Report | Notes |
 |---|------|---------|------|-------|--------|-----|--------|-------|
+| 10 | 2026-08-12 | Aalyria | Mission Engineer (Spacetime, Canada) | 3.3/5 | Evaluated | ❌ | [010](../reports/010-aalyria-2026-08-12.md) | OTTAWA + Canadian EIPA export control (citizen qualifies) - no visa friction. Best domain match found: SatCom L1/L3 + SDN + NMS. BLOCKER: CAD 122-160K tops below current 175K. Ask re senior band before applying. US roles all ITAR-gated so no L-1A route. |
 | 7 | 2026-08-11 | Anthropic | Technical Program Manager, Infrastructure | 4.1/5 | Evaluated | ❌ | [007](../reports/007-anthropic-2026-08-11.md) | Best archetype fit of 3 Anthropic roles; job id 5111783008; sponsors visas; NYC option; USD 290-365K |
 | 8 | 2026-08-11 | Anthropic | Staff+ Software Engineer, Platform | 3.6/5 | Evaluated | ❌ | [008](../reports/008-anthropic-2026-08-11.md) | Strong stack overlap but Staff+ bar is a stretch; job id 5157847008; NYC preferred by team; USD 405-485K |
 | 9 | 2026-08-11 | Anthropic | Senior Staff+ Software Engineer, Kubernetes Platform | 3.0/5 | SKIP | ❌ | [009](../reports/009-anthropic-2026-08-11.md) | K8s internals required well beyond user level; job id 5211241008; recommend 007 instead |
