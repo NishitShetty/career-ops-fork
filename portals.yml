@@ -290,3 +290,10 @@ tracked_companies:
     api: https://boards-api.greenhouse.io/v1/boards/anthropic/jobs
     notes: "US-only; platform/infra. SF/NYC/Seattle + London. Sponsors visas explicitly; no Canadian engineering entity, so no L-1A route. ~400 open roles."
     enabled: true
+
+  # -- Aerospace networking / SDN — closest domain match found to date (2026-08-12) --
+
+  - name: Aalyria
+    careers_url: https://ats.rippling.com/aalyria-careers/jobs
+    notes: "CA+US+UK entity; satcom/SDN. Spacetime = temporospatial SDN for satellite/aerospace networks — direct NMS+SatCom match. Ottawa-based Canada roles exist under CANADIAN export control (EIPA), which a Canadian citizen satisfies; US roles are ITAR US-person gated. Watch comp: Canada band ran below the CAD 200K floor."
+    enabled: true
