@@ -61,6 +61,12 @@ title_filter:
     - "Software Engineer"
     - "Software Development Engineer"
     - "SDE"
+    # -- Added 2026-08-12: "Backend Engineer" is a distinct market title that
+    #    "Software Engineer" does NOT substring-match. Found via a Scribd req
+    #    (Senior Backend Engineer, Content Foundations) that the scan missed. --
+    - "Backend Engineer"
+    - "Platform Engineer"
+    - "Infrastructure Engineer"
     # -- Widened 2026-08-03: candidate is open to TPM/PM/SDE/EM broadly, not
     #    just architecture-track roles, as long as comp clears CAD 200K+. --
     - "Product Manager"

@@ -120,45 +120,84 @@ Your existing material (Connector-3 overnight re-plan, cross-geo PI planning acr
 
 ---
 
-## The project: an IoT device-fleet telemetry and control plane
+## The project: a geospatial content-ingestion pipeline
+
+> **Pivoted 2026-08-12.** This slot previously held an *IoT device-fleet telemetry and control plane*. The architecture is nearly identical — an async pipeline ingesting messy inputs at scale with backpressure, idempotency, and observability — but the payload changed from device telemetry to **geospatial content**. The reasoning is in [scribd-content-foundations.md](scribd-content-foundations.md); the short version is that the geo payload serves strictly more of the current target set (Lyft Toronto's mapping org, Scribd Content Foundations, Aalyria Mission Engineer) while using the Vector Tiles / GeoJSON experience already on the CV. **Keep the telemetry framing in your pocket** — for a Tesla or satcom-fleet req, the same pipeline re-frames as fleet ingestion with almost no rework.
 
 **Recommendation, and the reasoning matters more than the idea.** One project, several goals at once:
 
 | Goal | How it serves it |
 |---|---|
 | **System design material** | Gives you *measured numbers* to cite instead of hypotheticals — the single best differentiator in a design interview |
-| **Fills the portfolio gap** | `config/profile.yml` has no portfolio URL — currently a flagged weakness on every application |
-| **Domain-relevant for most target employers** | Fleet telemetry/monitoring/control is directly relevant to Tesla, and structurally similar to what Amazon Leo/Kuiper, MDA, and Telesat all build |
+| **Fills the portfolio gap** | `config/profile.yml` has no portfolio URL — a flagged weakness on every application, and called out explicitly in report 008 as a real recall disadvantage for senior IC roles |
+| **Uses the moat instead of discarding it** | "Vector Tiles vs. GeoJSON POC" is already on the CV; this extends real experience rather than inventing a new domain |
+| **Domain-relevant across the current target set** | Mapping/geo ingestion is directly Lyft (Places & Search, Routing, MapXP); the ingestion-pipeline shape is directly Scribd Content Foundations; the adapter/topology modelling is directly Aalyria |
 | **EB-1A raw material** | A genuinely adopted open-source tool supports the "original contribution" criterion, per the career strategy |
-| **Product seed** | Ground-segment/IoT fleet tooling has a real buyer market (the 40–60 satcom employers) |
+| **Closes named CV gaps** | AWS serverless (Lambda/SQS/Step Functions) and embeddings/chunking/retrieval are both absent from `cv.md` and both appear as requirements across current targets |
+
+### The real-world problem it solves
+
+**Decided 2026-08-12: this ships as a public, hosted product with a real UI — not a private repo with a README.**
+
+**The product: "What's actually happening on Ottawa's streets, and where is the map wrong?"**
+
+Municipalities publish genuinely useful data — road closures, construction, bike lanes, transit, winter maintenance — across half a dozen incompatible feeds, in inconsistent formats, updated on different schedules, and almost nobody can use them together. Meanwhile OpenStreetMap has its own version of the same reality, and the two disagree constantly.
+
+So the site does two things a real person would visit for:
+
+1. **One unified live map** of the civic layers, actually usable on a phone.
+2. **A "where the map disagrees" layer** — places where municipal open data and OSM contradict each other. Genuinely useful to OSM contributors and city staff, and it is the *quality-gate stage rendered as a product feature* rather than as a log line.
+
+Why this framing is the right one: the quality gate, the rejection metrics, and the pipeline observability — the exact things employers want evidence of — stop being internal plumbing and **become the visible product**. You get the portfolio artifact and the interview evidence from the same work.
 
 ### Scope — deliberately narrow
 
 **Build:**
-1. **Device simulator** — N simulated devices (start 1K, scale to 100K+) publishing telemetry over MQTT or HTTP
-2. **Ingestion pipeline** — with **explicit backpressure handling** (Go channels are fine as the default; see the note below on when to add Akka)
-3. **Time-series storage** — InfluxDB or TimescaleDB, plus PostgreSQL for device metadata
-4. **Control plane** — dispatch commands *to* devices with **at-least-once delivery** and idempotency
-5. **Deployment** — Kubernetes + Helm (leverages your existing strength; costs almost no learning time)
+1. **Multi-format ingester** — municipal open data (Ottawa/Ontario portals: GeoJSON, CSV with WKT, shapefiles), **GTFS** transit feeds, and **OSM PBF** extracts. Real public data, genuinely messy, updated on real schedules.
+2. **Ingestion pipeline** — **explicit backpressure handling** (Go channels are fine as the default) and **idempotent re-ingestion**: content-hash dedup so a scheduled re-pull is provably safe.
+3. **Quality gate / quarantine stage** — malformed geometry, invalid encodings, truncated files, stale feeds, coordinate-system errors. Never drop silently; quarantine with a reason code. **These counts are a public page, not a log.**
+4. **Conflation / disagreement detection** — compare municipal features against OSM; surface mismatches. This is the differentiated part and the reason anyone visits.
+5. **Storage** — PostgreSQL + PostGIS for features and metadata; object storage for raw artifacts.
+6. **Serving layer** — build **PMTiles** from the normalised data, serve from object storage, render with **MapLibre GL JS**. No tile server to run, near-zero hosting cost.
+7. **Data observability** — trace one feature across every pipeline stage; answer "where is item X and why is it stuck?" Expose a public status page: last successful run per feed, freshness, rejection rate.
+8. **Deployment** — scheduled pipeline runs, static frontend. Kubernetes + Helm optional and only if you want the resume line; a single small VM plus object storage is honestly sufficient and cheaper.
 
-**Do NOT build:** a pretty UI, authentication, multi-tenancy, or a mobile app. They consume weeks and demonstrate nothing this project is for.
+**Optional stage 9, if targeting Scribd or any AI-adjacent req:** extract text/metadata from the source documents → chunk → embed → semantic search over civic notices. Closes the ML/LLM gap flagged in reports 008 and 009.
+
+**Do NOT build:** user accounts, multi-tenancy, a mobile app, or a CMS. Anonymous read-only is the entire product surface.
+
+### Hosting — keep it cheap and boring
+
+| Piece | Choice | Why |
+|---|---|---|
+| Tiles + raw artifacts | Cloudflare R2 or S3 | PMTiles is a single file read over HTTP range requests — no tile server, no egress surprise on R2 |
+| Frontend | Static site (Cloudflare Pages / Netlify) | Free tier, custom domain, nothing to operate |
+| Pipeline | Small VM (Hetzner/Fly) on a cron, or a scheduled GitHub Action | It runs on a schedule, not continuously — do not pay for idle |
+| Database | Managed Postgres with PostGIS (Neon/Supabase/Fly) | Free/cheap tier is plenty at city scale |
+
+**Buy the domain.** A real URL on `config/profile.yml` → `portfolio_url` is the point. It is currently empty, and that gap is flagged on every application.
 
 ### The part that actually matters: measure it
 
 **Benchmark and write up the results.** This is what converts a side project into interview currency:
 
-- Throughput ceiling — messages/sec before degradation
-- Latency percentiles — p50/p95/p99 under sustained load
+- Throughput ceiling — features/sec (or documents/sec) before degradation
+- Latency percentiles — p50/p95/p99 parse and write latency under sustained load
+- **Rejection rate** — what fraction of real-world input fails each quality gate, and why. This number *is* the "resilient to messy inputs" evidence.
 - **Behaviour under backpressure** — what happens when storage is slower than ingest?
-- **Failure modes** — kill the DB mid-stream; kill a pod; partition the network. What breaks, and how does it recover?
+- **Idempotency proof** — replay the same corpus twice; show downstream state is identical and no duplicate work occurred.
+- **Failure modes** — kill the DB mid-stream; kill a pod; feed a truncated file. What breaks, and how does it recover?
 
-A README that says *"at 50K devices at 1 Hz, ingest sustains X msg/s at p99 Y ms; when the write path is throttled, backpressure propagates to the source in Z ms and no messages are lost"* is worth more in a system design interview than any number of LeetCode problems.
+A README that says *"ingesting the Ontario OSM extract (N features), the pipeline sustains X features/s at p99 Y ms; 1.8% of input is quarantined — 60% invalid geometry, 30% encoding, 10% truncated — and a full replay produces byte-identical downstream state in Z minutes"* is worth more in a system design interview than any number of LeetCode problems.
+
+**Put the numbers on the site, not just in the README.** A public `/status` page showing per-feed freshness, last successful run, and rejection rate by class does three jobs at once: it is a real product feature, it is the observability evidence, and it means an interviewer can verify your claims in ten seconds without cloning anything.
 
 ### Honest caveats
 
 - **Timebox it to 3 weeks.** Projects like this expand indefinitely. A finished narrow version beats an abandoned ambitious one.
-- **Default to Go** for the whole pipeline — it's your strongest language and removes a learning-curve variable from project scope. **If you're specifically prepping for the Tesla overlay**, write only the stream-processing layer in Scala/Akka on top of an otherwise-Go project; see that overlay for the reasoning.
-- **Don't claim production scale you haven't reached.** "Simulated fleet of 100K devices on a local cluster" is credible and defensible; "handles millions of devices" is not, and will be probed.
+- **Default to Go** for the whole pipeline — it's your strongest language, it's in Scribd's stack, and it removes a learning-curve variable from project scope. **If you're specifically prepping for the Tesla overlay**, write only the stream-processing layer in Scala/Akka on top of an otherwise-Go project; see that overlay for the reasoning.
+- **Don't claim production scale you haven't reached.** "Ingests a country-sized OSM extract on a local cluster" is credible and defensible; "handles planet-scale map data" is not, and will be probed.
+- **The geo payload is a framing, not a cage.** Every metric above transfers verbatim to a telemetry or document-ingestion story. Swap the noun, keep the numbers.
 
 ---
 
