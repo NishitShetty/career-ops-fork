@@ -120,11 +120,11 @@ Your existing material (Connector-3 overnight re-plan, cross-geo PI planning acr
 
 ---
 
-## The project: blockheat — block-level urban heat mapping
+## The project: Urban Heat Atlas — block-level urban heat mapping
 
-> **This slot now points at a separate public repo: `~/github/blockheat`.** Full phased plan in its [ROADMAP.md](../../github/blockheat/ROADMAP.md). It lives in its own **public** repo, not here and not in `career`, because it needs a public URL, a commit history employers will read, and eventually a citable artifact — none of which can share a repository with private immigration and salary material.
+> **This slot now points at a separate public repo: `~/github/urban-heat-atlas`.** Full phased plan in its [ROADMAP.md](../../github/urban-heat-atlas/ROADMAP.md). It lives in its own **public** repo, not here and not in `career`, because it needs a public URL, a commit history employers will read, and eventually a citable artifact — none of which can share a repository with private immigration and salary material.
 >
-> **Pivot history.** This slot held an *IoT fleet-telemetry control plane* (2026-08-03), then a *geospatial content-ingestion pipeline* (2026-08-12), now blockheat (2026-08-14). Each pivot kept the same core — ingest messy real-world inputs, engineer features, model, serve, observe — and changed what rides on top. Blockheat is the version that adds a *model* worth defending and a research question worth answering, while still using the geospatial moat.
+> **Pivot history.** This slot held an *IoT fleet-telemetry control plane* (2026-08-03), then a *geospatial content-ingestion pipeline* (2026-08-12), now Urban Heat Atlas (2026-08-14). Each pivot kept the same core — ingest messy real-world inputs, engineer features, model, serve, observe — and changed what rides on top. Urban Heat Atlas is the version that adds a *model* worth defending and a research question worth answering, while still using the geospatial moat.
 >
 > **What it is in one line:** your weather app says "Ottawa: 28°C"; a parking lot runs 10–15°C hotter than a shaded street a few blocks away. Landsat measures surface temperature and land cover for every 30m patch, so you can learn the relationship and map every block.
 >
@@ -145,7 +145,7 @@ Your existing material (Connector-3 overnight re-plan, cross-geo PI planning acr
 
 ### Scope, phases, and stack
 
-All of it now lives in the project repo so it stays next to the code: **[`~/github/blockheat/ROADMAP.md`](../../github/blockheat/ROADMAP.md)**.
+All of it now lives in the project repo so it stays next to the code: **[`~/github/urban-heat-atlas/ROADMAP.md`](../../github/urban-heat-atlas/ROADMAP.md)**.
 
 Five phases, each answering one question:
 
