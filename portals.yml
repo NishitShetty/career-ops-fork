@@ -299,6 +299,86 @@ tracked_companies:
 
   # -- Aerospace networking / SDN — closest domain match found to date (2026-08-12) --
 
+  # -- CLEARANCE-GATED CANADIAN DEFENCE & SPACE (added 2026-08-14) --
+  #
+  #    Why this category exists: these employers gate on Canadian citizenship
+  #    or PR — security clearance, Controlled Goods Program, or EIPA export
+  #    control. The candidate PASSES all three as a Canadian citizen. This is
+  #    the mirror image of the US ITAR gate, which hard-DQs him: the same class
+  #    of requirement that closes SpaceX, Vast, and the US primes actively
+  #    selects for him here, and it thins the applicant pool considerably.
+  #    Evidence: report 010 (Aalyria, EIPA), report 018 (Photon-IV, CGP),
+  #    report 019 (Cohere, Canadian TS clearance).
+  #
+  #    STATUS: discover-ats.mjs probes for this whole batch returned
+  #    "probe error — board status unknown" (network, not a negative result).
+  #    Entries are websearch-only until a board is confirmed; re-run
+  #    `node discover-ats.mjs --in <list> --summary` on a clean network to
+  #    resolve any that have Greenhouse/Lever/Ashby/Workday boards.
+
+  - name: Calian Group
+    careers_url: https://www.calian.com/careers/
+    scan_method: websearch
+    scan_query: 'site:calian.com/careers ("Systems Architect" OR "Engineering Manager" OR "Technical Lead" OR "Software Engineer") (satellite OR SATCOM OR "ground segment")'
+    notes: "CA-based; satcom/defence. Ottawa HQ, US operations. Clearance/CGP-gated — citizen qualifies. ATS board unconfirmed."
+    enabled: true
+
+  - name: MDA Space
+    careers_url: https://mda.space/careers
+    scan_method: websearch
+    scan_query: 'site:mda.space ("Systems Architect" OR "Engineering Manager" OR "Technical Lead" OR "Software Engineer")'
+    notes: "CA-based; satcom/space. Brampton ON. Duplicate of the entry above — kept here for category grouping only; disable one if scans double-count."
+    enabled: false
+
+  - name: NorthStar Earth and Space
+    careers_url: https://www.northstar-data.com/careers
+    scan_method: websearch
+    scan_query: 'site:northstar-data.com ("Software Engineer" OR "Systems Engineer" OR "Technical Lead")'
+    notes: "CA-based; space situational awareness. Montreal — outside the Ottawa/Toronto location policy. ATS board unconfirmed."
+    enabled: true
+
+  - name: Mission Control Space Services
+    careers_url: https://www.missioncontrolspaceservices.com/careers
+    scan_method: websearch
+    scan_query: 'site:missioncontrolspaceservices.com ("Software Engineer" OR "Systems Engineer")'
+    notes: "CA-based; space robotics/ground software. Ottawa — home turf. Small company, comp likely below floor. ATS board unconfirmed."
+    enabled: true
+
+  - name: Thales Canada
+    careers_url: https://www.thalesgroup.com/en/canada/careers
+    scan_method: websearch
+    scan_query: 'site:thalesgroup.com ("Software Engineer" OR "Systems Architect" OR "Solutions Engineer") Canada Ottawa'
+    notes: "CA+global entity; defence/aerospace. Ottawa presence confirmed via the 2026-08-12 reverse-ATS sweep. Clearance-gated. ATS board unconfirmed."
+    enabled: true
+
+  - name: General Dynamics Mission Systems Canada
+    careers_url: https://gdmissionsystems.ca/careers
+    scan_method: websearch
+    scan_query: 'site:gdmissionsystems.ca ("Software Engineer" OR "Systems Engineer" OR "Technical Lead")'
+    notes: "CA entity of a US parent; defence. Ottawa + Calgary. Clearance-gated — citizen qualifies for the CANADIAN entity; the US parent is ITAR-gated and remains closed. ATS board unconfirmed."
+    enabled: true
+
+  - name: L3Harris Canada
+    careers_url: https://www.l3harris.com/careers
+    scan_method: websearch
+    scan_query: 'site:l3harris.com/careers ("Software Engineer" OR "Systems Engineer") Canada Waterloo OR Ottawa'
+    notes: "CA entity of a US parent; space/defence. Waterloo ON. Same split as GDMS — Canadian entity open, US parent ITAR-closed. ATS board unconfirmed."
+    enabled: true
+
+  - name: NAV CANADA
+    careers_url: https://www.navcanada.ca/en/careers.aspx
+    scan_method: websearch
+    scan_query: 'site:navcanada.ca ("Systems Engineer" OR "Software Engineer" OR "Technical Lead")'
+    notes: "CA-only; air navigation systems. Ottawa HQ — home turf, aviation-network domain adjacency to the Inmarsat work. No US entity, so no intracompany-transfer route. Found via the 2026-08-12 sweep."
+    enabled: true
+
+  - name: Photon-IV
+    careers_url: https://www.linkedin.com/company/photon-iv/jobs/
+    scan_method: websearch
+    scan_query: '"Photon-IV" (jobs OR careers OR hiring) SATCOM OR software'
+    notes: "CA-based; satcom/defence. Waterloo Region, on-site only. ~7 employees, DND contract. Evaluated 2.4/5 (report 018) — orbital-mechanics gap, relocation, no posted comp. Tracked for future reqs, not this one."
+    enabled: true
+
   - name: Aalyria
     careers_url: https://ats.rippling.com/aalyria-careers/jobs
     notes: "CA+US+UK entity; satcom/SDN. Spacetime = temporospatial SDN for satellite/aerospace networks — direct NMS+SatCom match. Ottawa-based Canada roles exist under CANADIAN export control (EIPA), which a Canadian citizen satisfies; US roles are ITAR US-person gated. Watch comp: Canada band ran below the CAD 200K floor."
