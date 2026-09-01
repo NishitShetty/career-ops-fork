@@ -170,6 +170,8 @@ Read the generic core above first. Overlays add company- or role-specific weight
 | Overlay | File | What it adds |
 |---|---|---|
 | Tesla — Software Distributed Systems Engineer | [tesla-distributed-systems-engineer.md](tesla-distributed-systems-engineer.md) | Loop structure, Scala/Akka framing, energy-domain primer, Richmond Hill site read, comp/level negotiation |
+| **Cohere — Forward Deployed Engineer, Sovereign AI** | [cohere-fde-sovereign-ai.md](cohere-fde-sovereign-ai.md) | **Highest-priority live target.** Ottawa, CAD 175-385K, clearance-eligible. Apply-now sequencing, the RAG/agentic project that closes the gap, and the customer round you should win |
+| Scribd — Senior Backend Engineer, Content Foundations | [scribd-content-foundations.md](scribd-content-foundations.md) | Requirement-by-requirement read, four features that signal that team |
 
 **When you have a specific req to prepare for, ask for an overlay** — same deep-research process as Tesla, tailored to that company's actual interview process and domain, on top of this shared foundation.
 
