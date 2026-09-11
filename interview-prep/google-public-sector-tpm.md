@@ -338,6 +338,34 @@ That is honest, specific, entirely backed by `cv.md`, and it reframes the gap fr
 
 ---
 
+# Org context — Google Public Sector is US-anchored
+
+Two sibling reqs found on LinkedIn, both now closed, both **US**:
+
+| Req | Location | Gate |
+|---|---|---|
+| Technical Program Manager, Google Public Sector (LI 4292185568) | Reston, VA | US federal acquisition experience; Capture / RFx / SoW development |
+| **Leadership**, TPM, Google Public Sector (LI 4287510171) | Washington DC / Reston VA | **US citizenship** + **active TS/SCI with polygraph** |
+
+**What this tells you.** Google Public Sector is a **US-anchored organisation**, which explains the unlocalized *"United States public sector institutions"* boilerplate on your Canadian req. The Ottawa/Toronto/Montreal posting is a **newer Canadian extension** of it.
+
+Three consequences:
+
+1. **Question 2 below is sharper than it looks.** Asking what the Canadian mandate is, and whether this team reports into the US Public Sector org or into Google Cloud Canada, is a substantive question about where the role sits — not small talk.
+2. **The Canadian team is probably small and new.** That makes a referral disproportionately effective and unusually achievable — the same logic as the Cohere Ottawa overlay.
+3. **Those US reqs would hard-DQ you** (US citizenship, TS/SCI with polygraph). The Canadian req's Personnel Security Clearance does the opposite. Worth internalising how sharply the two regimes diverge — it is the single clearest illustration of the asymmetry in your whole search.
+
+# Leads
+
+| Person | Role | Confidence | Use |
+|---|---|---|---|
+| **Farsad Nasseri** | Country Managing Director, Google Cloud Canada (appointed Jan 2025) | **High** — announced on [blog.google](https://blog.google/intl/en-ca/company-news/inside-google/google-cloud-welcomes-farsad-nasseri-as-new-country-manager-for-canada/) | Skip-level. Light-touch ask for a pointer, not a pitch |
+| **John Cousens** | Managing Director, Public Sector Canada, Google Cloud Canada Corporation | **Medium** — surfaced from Canada's federal [Lobbying Registry](https://lobbycanada.gc.ca/), not directly verified (Cloudflare-blocked). **Confirm on LinkedIn before using the name.** | **Primary target** if confirmed — most likely owner of the org this req sits in |
+
+**Still unknown:** the assigned recruiter and any team peers. Neither is reachable through web search — LinkedIn blocks profile enumeration. Search LinkedIn directly for `Google` + `public sector` + `Ottawa`/`Toronto`, and check the req's own LinkedIn listing for a named poster.
+
+---
+
 # Questions to ask them
 
 1. Is this req fixed at L4, or can the loop level to L5 given eleven years of experience?
