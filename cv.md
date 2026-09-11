@@ -15,7 +15,7 @@ Technical Product / Delivery Leader with 11+ years of experience across the Sate
 **Product Delivery Lead & Senior Software Engineer** | April 2023 – Present
 - Single-Threaded Ownership: orchestrated end-to-end delivery of the NMS Map Visualization Capability across 6 Epics; managed stakeholders (PM, Architects, UI/UX teams) to align software integration.
 - High-judgment trade-offs: led the architectural shift for real-time asset tracking; developed a POC comparing Vector Tiles vs. GeoJSON to optimize frontend latency. Resolved a month-long stakeholder stalemate on Keycloak integration by independently selecting and implementing the most cost-effective, high-performance authentication solution.
-- Operational excellence: identified and resolved recurring memory/CPU leaks in map-converter services through profiling; achieved 100% system stability during high-scale RVT (Regulated Verification Testing).
+- Operational excellence: identified and resolved recurring memory/CPU leaks in map-converter services through profiling; achieved 100% system stability during high-scale RVT (Release Validation Testing).
 
 **Senior Software Engineer & Scrum Master** | December 2021 – March 2023
 - Matrix leadership: managed cross-functional PI planning for distributed teams (Belgium, USA, Canada); re-architected delivery plans overnight to incorporate a high-priority "Connector-3" requirement, ensuring successful stakeholder readout and commitment.

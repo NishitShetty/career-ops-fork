@@ -210,7 +210,7 @@ Government contracting is not a different discipline from what you have done. It
 | Contract concept | Your equivalent (from `cv.md`) |
 |---|---|
 | **Acceptance criteria** — delivery is when the customer accepts, not when you ship | **Site Acceptance Testing for Inmarsat in Michigan and Perth.** SAT *is* formal acceptance against agreed criteria, performed on the customer's site, with sign-off gating completion. This is the single strongest mapping you have. |
-| **Compliance-gated release** — a program milestone that is an audit event, not an engineering one | **"100% system stability during high-scale RVT."** A verification gate that must pass before release proceeds. |
+| **Release gate** — a milestone that must pass before delivery proceeds | **"100% system stability during high-scale RVT" (Release Validation Testing).** An **internal** quality gate, not a regulatory or audit event — say so plainly if asked. It evidences scale and reliability discipline, not compliance delivery. |
 | **SLA / service commitment under live conditions** | **The aviation network traffic-drop debug, resolved before the aircraft landed.** A live-service obligation with a hard, externally imposed deadline. |
 | **Milestone commitment with external visibility** | **The 4 AM terminal-movement fix for a 10 AM Inmarsat executive demo.** |
 | **Multi-party delivery with dependency management** | **STO across 6 Epics**, aligning PM, architects, and UI/UX; **PI planning across Belgium, USA and Canada.** |
@@ -218,11 +218,13 @@ Government contracting is not a different discipline from what you have done. It
 
 **The sentence that carries the interview:**
 
-> *"I have not delivered a government program. But I have spent eleven years delivering against external customer commitments where acceptance was formal, the deadline was someone else's, and failure was visible — Site Acceptance Testing on the customer's site in Michigan and Perth, regulated verification gates before release, and a live aviation network fault I had to close before the aircraft landed. The instruments are new to me. The discipline is not."*
+> *"I have not delivered a government program. But I have spent eleven years delivering against external customer commitments where acceptance was formal, the deadline was someone else's, and failure was visible — Site Acceptance Testing on the customer's site in Michigan and Perth, and a live aviation network fault I had to close before the aircraft landed. The instruments are new to me. The discipline is not."*
 
 That is honest, specific, entirely backed by `cv.md`, and it reframes the gap from *missing experience* to *missing vocabulary* — which is true, and which you will have closed by the time you say it.
 
-> ⚠️ **Unresolved before you use this:** `cv.md` and your Technical resume expand RVT as **"Regulated Verification Testing"**; your Product resume says **"Release Validation Testing."** These cannot both be right, and the first is doing real work in the argument above. Settle it before an interview — an interviewer who asks what RVT stands for will get a confident wrong answer otherwise.
+> ✅ **Resolved 2026-09-11:** RVT is **Release Validation Testing** — an internal pre-release quality gate. Corrected across `cv.md`, `article-digest.md`, and reports 007–020.
+>
+> **What this changes:** RVT is *not* a regulatory or compliance gate, so it cannot carry the public-sector bridge. **Site Acceptance Testing does that work** — formal acceptance against agreed criteria, on the customer's site, gating completion. It was always the stronger mapping. Keep RVT as evidence of reliability discipline under scale, and never imply it was externally regulated.
 
 ---
 
@@ -362,7 +364,7 @@ Every one of these is a stated JD requirement you don't meet. Naming two of them
 
 # Prep checklist
 
-- [ ] **Resolve the RVT expansion** — Regulated Verification vs Release Validation. Blocks the Part 6 bridge.
+- [x] ~~Resolve the RVT expansion~~ — **Release Validation Testing**, confirmed 2026-09-11. Bridge now leads with Site Acceptance Testing.
 - [ ] Resolve the Helm vs CI/CD-decomposition discrepancy between your two resumes (report 020 / resume review)
 - [ ] Re-read Parts 1–3 until MSA/SoW/order form and Standing Offer/call-up are automatic
 - [ ] Memorise: **PBMM = Protected B, Medium Integrity, Medium Availability**; ITSG-33; CCCS assessment

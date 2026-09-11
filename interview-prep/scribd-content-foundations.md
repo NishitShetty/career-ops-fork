@@ -94,7 +94,7 @@ Extract metadata → chunk → embed → retrieve. This also closes the ML/LLM g
 
 ## If you interview
 
-**Lead with the legacy-refactoring line.** It is their first stated requirement and your strongest match. The NMS modernisation — legacy SatCom deployments feeding a next-gen architecture, with 100% stability maintained through regulated verification testing — is a better answer to *"navigating the trade-offs of refactoring legacy systems while maintaining high availability"* than most candidates will have.
+**Lead with the legacy-refactoring line.** It is their first stated requirement and your strongest match. The NMS modernisation — legacy SatCom deployments feeding a next-gen architecture, with 100% stability maintained through high-scale release validation testing — is a better answer to *"navigating the trade-offs of refactoring legacy systems while maintaining high availability"* than most candidates will have.
 
 **Then the consensus story.** The Keycloak stalemate (a month-long deadlock, broken by independently evaluating options on cost and performance and shipping the decision) directly answers *"building consensus across cross-functional engineering teams."*
 

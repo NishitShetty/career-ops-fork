@@ -20,7 +20,7 @@ Detailed backing for the one-line bullets in `cv.md`. Read alongside it during e
 **Proof points:**
 - Aligned PM, Architects, and UI/UX teams on software integration as the single accountable owner.
 - Identified and resolved recurring **memory/CPU leaks in map-converter services** through profiling.
-- Achieved **100% system stability during high-scale RVT** (Regulated Verification Testing).
+- Achieved **100% system stability during high-scale RVT** (Release Validation Testing).
 
 **Why this matters for product roles:** this is the closest thing in the record to product ownership — a named capability, owned end to end, with cross-functional alignment and a documented technical trade-off. `[TO FILL: did you set the roadmap or receive it? did you talk to customers directly? who decided scope?]` — that answer is what separates "delivery lead" from "product manager" on a Google PM screen.
 
