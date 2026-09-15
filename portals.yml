@@ -83,6 +83,17 @@ title_filter:
     #    pre-sales experience -- expect this to be probed in interviews. --
     - "Solutions Engineer"
     - "Sales Engineer"
+    # -- Added 2026-09-15 after the Google Public Sector TPM req closed before it
+    #    was applied to. Google uses its own title vocabulary and the existing
+    #    filters miss it: "Software Developer" not "Software Engineer";
+    #    "Solution Architect" (singular) not "Solutions Architect"; and
+    #    "Delivery Executive" for customer-facing delivery ownership. Same class
+    #    of miss as the "Backend Engineer" gap found 2026-08-12. --
+    - "Software Developer"
+    - "Systems Developer"
+    - "Solution Architect"
+    - "Delivery Executive"
+    - "Technical Solutions Consultant"
     # -- Domain match --
     - "Geospatial"
     - "Mapping"

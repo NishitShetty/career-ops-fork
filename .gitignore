@@ -139,3 +139,8 @@ plan/
 !data/applications.md
 !reports/*.md
 !interview-prep/*.md
+
+# Google scanner runtime artifacts (local state, not source)
+data/google-jobs-snapshot.json
+data/google-scan.log
+data/google-scan.err
