@@ -366,6 +366,30 @@ Three consequences:
 
 ---
 
+# Referral — submitted via internal contact (2026-09-16)
+
+**Status:** external posting pulled ~2026-09-15; **requisition confirmed live internally.** An internal Google contact is referring against job ID `85741897305203398`. The posting came down on application volume, not because the role was filled.
+
+**A referral changes the odds materially** — it routes to a recruiter directly instead of the pool that closed the posting in days.
+
+### Blurb supplied to the referrer
+
+> Most of what I've done for eleven years is remove whatever is blocking other people. A Keycloak decision sat unresolved across teams for a month — I evaluated the options, picked one, and implemented it. I stopped a planned 3-month kernel migration by isolating a 2 MB bootloader memory discrepancy; the real fix was in firmware, not the kernel. When a hardware shortage stalled modem verification, I built a spectrum-analyzer substitute from a HackRF and open-source tooling so the schedule held.
+>
+> That's TPM work, and I've been doing it without the title — owning delivery of a network management capability across six epics, aligning product, architecture and UX, and running PI planning for teams across Canada, the US and Belgium. None of them reported to me.
+>
+> For this role specifically: I'm a Canadian citizen and eligible for a Personnel Security Clearance. And while I haven't delivered a government program, I've spent eleven years delivering against external customer commitments where acceptance was formal and the deadline was someone else's — on-site Site Acceptance Testing for Inmarsat in Michigan and Perth, and a live aviation network fault I had to close before the aircraft landed.
+
+### Why it's framed this way
+
+**The spine is unblocking, not breadth.** A TPM has no direct authority, so influence *is* the job — which makes "I remove what blocks people" the single most role-relevant claim available, and it is the most consistent pattern in `cv.md` (six instances: two literal uses of "unblock", the Keycloak stalemate, the kernel-migration prevention, the 92% deploy-cycle cut, the org-wide ERD standard).
+
+**Deliberately avoided:** the word *breadth* — it reads as "generalist" to a Google committee — and any claim of goodwill. Goodwill is an unverifiable self-report; the behaviour that produces it is evidenced six times over, so the blurb claims the behaviour and lets the reader draw the conclusion.
+
+**The third paragraph names the gap first.** Public-sector contractual delivery is a stated *minimum* qualification and the one real hole. Naming it and supplying the nearest honest equivalent (Site Acceptance Testing — formal acceptance against agreed criteria, commercial rather than governmental) beats letting a screener find it.
+
+---
+
 # Questions to ask them
 
 1. Is this req fixed at L4, or can the loop level to L5 given eleven years of experience?
