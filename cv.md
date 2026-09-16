@@ -14,7 +14,7 @@ Technical Product / Delivery Leader with 11+ years of experience across the Sate
 
 **Product Delivery Lead & Senior Software Engineer** | April 2023 – Present
 - Single-Threaded Ownership: orchestrated end-to-end delivery of the NMS Map Visualization Capability across 6 Epics; managed stakeholders (PM, Architects, UI/UX teams) to align software integration.
-- High-judgment trade-offs: led the architectural shift for real-time asset tracking; developed a POC comparing Vector Tiles vs. GeoJSON to optimize frontend latency. Resolved a month-long stakeholder stalemate on Keycloak integration by independently selecting and implementing the most cost-effective, high-performance authentication solution.
+- High-judgment trade-offs: challenged the team's unexamined default of GeoJSON for real-time asset tracking by building a working POC of both approaches across backend and UI (vector tiles rendered with MapLibre); demonstrated vector tiles were faster and scaled better, won the team over, and led the resulting architectural shift. Resolved a month-long stakeholder stalemate on Keycloak integration by independently selecting and implementing the most cost-effective, high-performance authentication solution.
 - Operational excellence: identified and resolved recurring memory/CPU leaks in map-converter services through profiling; achieved 100% system stability during high-scale RVT (Release Validation Testing).
 
 **Senior Software Engineer & Scrum Master** | December 2021 – March 2023
@@ -45,7 +45,7 @@ Technical Product / Delivery Leader with 11+ years of experience across the Sate
 ## Skills
 
 - **Product/Delivery:** Feature roadmap strategy, Single-Threaded Ownership (STO), Agile/Scrum, Scrum Master, matrix/distributed team leadership, PI planning, stakeholder management
-- **Domain:** SatCom (L1/L3), QoS, SDN, Geospatial Visualization (Vector Tiles, GeoJSON), Network Management Systems (NMS)
+- **Domain:** SatCom (L1/L3), QoS, SDN, Geospatial Visualization (Vector Tiles, GeoJSON, MapLibre), Network Management Systems (NMS)
 - **Tech Stack:** Go, Python, JS/TS, Java, SQL, GraphQL, Kubernetes, Helm, AWS, PostgreSQL, GitLab CI/CD
 
 ## Languages
